@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaQuest", "VillaQuest\VillaQuest.csproj", "{D725120C-E9F0-4DB0-82D0-B632E4CC2D8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VillaQuest", "VillaQuest\VillaQuest.csproj", "{D725120C-E9F0-4DB0-82D0-B632E4CC2D8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaQuest.Domain", "VillaQuest.Domain\VillaQuest.Domain.csproj", "{A13579ED-3B7C-42AA-A05A-732BF887FA75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaQuest.Infrastrucutre", "VillaQuest.Infrastrucutre\VillaQuest.Infrastrucutre.csproj", "{89BE6F79-292A-4D2D-9477-524B19911DCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaQuest.Application", "VillaQuest.Application\VillaQuest.Application.csproj", "{BB777EC6-AC55-486C-87FD-7A470FC51F21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{D725120C-E9F0-4DB0-82D0-B632E4CC2D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D725120C-E9F0-4DB0-82D0-B632E4CC2D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D725120C-E9F0-4DB0-82D0-B632E4CC2D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13579ED-3B7C-42AA-A05A-732BF887FA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13579ED-3B7C-42AA-A05A-732BF887FA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13579ED-3B7C-42AA-A05A-732BF887FA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13579ED-3B7C-42AA-A05A-732BF887FA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89BE6F79-292A-4D2D-9477-524B19911DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89BE6F79-292A-4D2D-9477-524B19911DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89BE6F79-292A-4D2D-9477-524B19911DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89BE6F79-292A-4D2D-9477-524B19911DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB777EC6-AC55-486C-87FD-7A470FC51F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB777EC6-AC55-486C-87FD-7A470FC51F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB777EC6-AC55-486C-87FD-7A470FC51F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB777EC6-AC55-486C-87FD-7A470FC51F21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
