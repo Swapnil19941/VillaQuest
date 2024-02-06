@@ -1,4 +1,6 @@
-﻿@*
+﻿@model VillaQuest.Domain.Entities.Villa
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -6,3 +8,34 @@
 
 
 <h1>Create</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="@Model.Name"></label>
+        <input asp-for="@Model.Name" />
+    </div>
+    <div>
+        <label asp-for="@Model.Description"></label>
+        <input asp-for="@Model.Description" />
+    </div>
+    <div>
+        <label asp-for="@Model.Price"></label>
+        <input asp-for="@Model.Price" />
+    </div>
+    <div>
+        <label asp-for="@Model.Sqft"></label>
+        <input asp-for="@Model.Sqft" />
+    </div>
+    <div>
+        <label asp-for="@Model.Occupancy"></label>
+        <input asp-for="@Model.Occupancy" />
+    </div>
+    <div>
+        <label asp-for="@Model.ImageUrl"></label>
+        <input asp-for="@Model.ImageUrl" />
+    </div>
+    <div>
+        <button type="submit">Create</button>
+        <button asp-controller="Villa" asp-action="Index">Cancle</button>
+    </div>
+</form>
