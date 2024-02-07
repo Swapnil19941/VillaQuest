@@ -10,32 +10,47 @@
 <h1>Create</h1>
 
 <form method="post">
+    @* <div asp-validation-summary="ModelOnly"></div> *@
+    <div asp-validation-summary="All"></div>
     <div>
         <label asp-for="@Model.Name"></label>
         <input asp-for="@Model.Name" />
+        <span asp-validation-for="@Model.Name" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="@Model.Description"></label>
         <input asp-for="@Model.Description" />
+        <span asp-validation-for="Description" class="text-denger"></span>
     </div>
     <div>
         <label asp-for="@Model.Price"></label>
         <input asp-for="@Model.Price" />
+        <span asp-validation-for="Price" class="text-denger"></span>
     </div>
     <div>
         <label asp-for="@Model.Sqft"></label>
         <input asp-for="@Model.Sqft" />
+        <span asp-validation-for="Sqft" class="text-denger"></span>
     </div>
     <div>
         <label asp-for="@Model.Occupancy"></label>
         <input asp-for="@Model.Occupancy" />
+        <span asp-validation-for="Occupancy" class="text-denger"></span>
     </div>
     <div>
         <label asp-for="@Model.ImageUrl"></label>
         <input asp-for="@Model.ImageUrl" />
+        <span asp-validation-for="ImageUrl" class="text-denger"></span>
     </div>
     <div>
         <button type="submit">Create</button>
         <button asp-controller="Villa" asp-action="Index">Cancle</button>
     </div>
 </form>
+
+
+@section Scripts{
+@{
+        <partial name="_ValidationScriptsPartial" />
+}
+}

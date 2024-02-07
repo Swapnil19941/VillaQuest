@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using VillaQuest.Domain.Entities;
 using VillaQuest.Infrastrucutre.Data;
 
@@ -28,9 +29,18 @@ namespace VillaQuest.Controllers
 
         [HttpPost]
         public IActionResult Create(Villa obj) {
-            _dbContext.Villas.Add(obj);
-            _dbContext.SaveChanges();
-            return RedirectToAction("Index","Villa");
+            if(obj.Name.Equals(obj.Description))
+            {
+                ModelState.AddModelError("Description", "The Name and Description of villa cannot be a similer");
+            }
+            if(ModelState.IsValid)
+            {
+                _dbContext.Villas.Add(obj);
+                _dbContext.SaveChanges();
+                return RedirectToAction("Index", "Villa");
+            }
+
+            return View(obj);
         }
     }
 }
