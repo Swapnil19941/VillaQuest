@@ -21,4 +21,8 @@
     <ProjectReference Include="..\VillaQuest.Infrastrucutre\VillaQuest.Infrastrucutre.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\NewFolder\" />
+  </ItemGroup>
+
 </Project>
