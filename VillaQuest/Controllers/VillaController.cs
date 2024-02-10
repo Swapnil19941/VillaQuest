@@ -38,9 +38,12 @@ namespace VillaQuest.Controllers
             {
                 _dbContext.Villas.Add(villa);
                 _dbContext.SaveChanges();
+                TempData["Success"] = "Villa Created Succesfully";
                 return RedirectToAction("Index", "Villa");
+
             }
 
+            TempData["Error"] = "The Villa Could Not Be Created";
             return View(villa);
         }
 
@@ -52,23 +55,25 @@ namespace VillaQuest.Controllers
             if (villa == null)
             {
                 return View("Error", "Home");
-            }
 
+            }
+            
             return View(villa);
         }
 
         [HttpPost]
         public IActionResult Update(Villa villa)
         {
-            if (villa == null && villa.Id > 0)
+            
+            if(ModelState.IsValid && villa.Id > 0)
             {
-
-                return View("Error", "Home");
+                _dbContext.Villas.Update(villa);
+                _dbContext.SaveChanges();
+                return RedirectToAction("Index");
             }
 
-            _dbContext.Villas.Update(villa);
-            _dbContext.SaveChanges();
-            return RedirectToAction("Index");
+            TempData["Error"] = "The Villa Could Not Be Deleted";
+            return View();
         }
 
 
@@ -98,7 +103,8 @@ namespace VillaQuest.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View("Error", "Home");
+            TempData["Error"] = "The Villa Could Not Be Deleted";
+            return View();
         }
     }
 }
