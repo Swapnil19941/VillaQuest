@@ -1,0 +1,49 @@
+﻿@model VillaNumberVM
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<form method="post"> 
+    <div>
+        <label asp-for="@Model.VillaNumber.Villa_Number"></label>
+        <input asp-for="@Model.VillaNumber.Villa_Number" />
+        <span asp-validation-for="@Model.VillaNumber.Villa_Number" />
+    </div>
+
+    <div>
+        @*<select asp-for="@Model.VillaId" asp-items="@ViewData["VillaList"] as IEnumerable<SelectListItem>">
+        <option disabled selected>Select Villa</option>
+        </select>
+        <span asp-validation-for="@Model.VillaId" />*@
+
+        @*<select asp-for="@Model.VillaId" asp-items="@ViewBag.VillaList">
+        <option disabled selected>Select Villa</option>
+        </select>
+        <span asp-validation-for="@Model.VillaId" />*@
+
+        <select asp-for="@Model.VillaNumber.VillaId" asp-items="@Model.Villas">
+            <option disabled selected>Select Villa</option>
+        </select>
+        <span asp-validation-for="@Model.VillaNumber.VillaId"  />
+    </div>
+
+    <div>
+        <label asp-for="@Model.VillaNumber.SpacialDetails"></label>
+        <input asp-for="@Model.VillaNumber.SpacialDetails"  />
+        <span asp-validation-for="@Model.VillaNumber.SpacialDetails" />
+    </div>
+
+    <div>
+        <button  type="submit">Create</button>
+        <button asp-area="" asp-controller="VillaNumber" asp-action="Index">Cancle</button>
+    </div>
+</form>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
